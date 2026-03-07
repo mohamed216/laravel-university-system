@@ -98,3 +98,16 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/library/borrow', [LibraryController::class, 'borrow'])->name('library.borrow');
     Route::post('/library/return', [LibraryController::class, 'returnBook'])->name('library.return');
 });
+
+
+// Online Lectures Routes
+Route::middleware(['role:admin,professor'])->group(function () {
+    Route::resource('online-lectures', OnlineLectureController::class);
+    Route::post('/online-lectures/{onlineLecture}/start', [OnlineLectureController::class, 'startLive'])->name('online-lectures.start');
+    Route::post('/online-lectures/{onlineLecture}/end', [OnlineLectureController::class, 'endLive'])->name('online-lectures.end');
+});
+
+// Student Online Lectures (view only)
+Route::middleware(['auth'])->group(function () {
+    Route::get('/my-lectures', [OnlineLectureController::class, 'myLectures'])->name('online-lectures.my');
+});

@@ -81,6 +81,9 @@
                     <a href="{{ route('library.index') }}" class="{{ request()->routeIs('library.*') ? 'active' : '' }}">
                         <i class="bi bi-library me-2"></i> {{ __('Library') }}
                     </a>
+                    <a href="{{ route('online-lectures.index') }}" class="{{ request()->routeIs('online-lectures.*') ? 'active' : '' }}">
+                        <i class="bi bi-camera-video me-2"></i> {{ __('Online Lectures') }}
+                    </a>
                     
                     @role('admin')
                     <hr class="my-2">
