@@ -22,7 +22,7 @@ class AttendanceController extends Controller
     {
         $request->validate([
             'student_id' => 'required|exists:students,id',
-            'course_id' => 'required|exists:courses,id',
+            'course_section_id' => 'required|exists:course_sections,id',
             'date' => 'required|date',
             'status' => 'required',
         ]);
@@ -45,7 +45,7 @@ class AttendanceController extends Controller
     {
         $request->validate([
             'student_id' => 'required|exists:students,id',
-            'course_id' => 'required|exists:courses,id',
+            'course_section_id' => 'required|exists:course_sections,id',
             'date' => 'required|date',
             'status' => 'required',
         ]);
@@ -64,7 +64,7 @@ class AttendanceController extends Controller
     {
         $request->validate([
             'student_id' => 'required|exists:students,id',
-            'course_id' => 'required|exists:courses,id',
+            'course_section_id' => 'required|exists:course_sections,id',
             'date' => 'required|date',
             'status' => 'required',
         ]);
@@ -72,7 +72,7 @@ class AttendanceController extends Controller
         Attendance::updateOrCreate(
             [
                 'student_id' => $request->student_id,
-                'course_id' => $request->course_id,
+                'course_section_id' => $request->course_section_id,
                 'date' => $request->date,
             ],
             ['status' => $request->status]

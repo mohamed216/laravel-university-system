@@ -25,8 +25,6 @@ class PaymentController extends Controller
             'amount' => 'required|numeric',
             'payment_method' => 'required',
             'payment_date' => 'required|date',
-            'reference_number' => 'nullable',
-            'status' => 'required',
         ]);
 
         $paymentData = $request->all();
@@ -53,8 +51,6 @@ class PaymentController extends Controller
             'amount' => 'required|numeric',
             'payment_method' => 'required',
             'payment_date' => 'required|date',
-            'reference_number' => 'nullable',
-            'status' => 'required',
         ]);
 
         $payment->update($request->all());

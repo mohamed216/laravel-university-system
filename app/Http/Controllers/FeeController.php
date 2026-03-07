@@ -21,7 +21,7 @@ class FeeController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'student_id' => 'required|exists:students,id',
+            'academic_year_id' => 'required|exists:academic_years,id',
             'amount' => 'required|numeric',
             'type' => 'required',
             'due_date' => 'required|date',
@@ -45,7 +45,7 @@ class FeeController extends Controller
     public function update(Request $request, Fee $fee)
     {
         $request->validate([
-            'student_id' => 'required|exists:students,id',
+            'academic_year_id' => 'required|exists:academic_years,id',
             'amount' => 'required|numeric',
             'type' => 'required',
             'due_date' => 'required|date',

@@ -21,10 +21,9 @@ class GradeController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'student_id' => 'required|exists:students,id',
-            'course_id' => 'required|exists:courses,id',
-            'grade' => 'required',
-            'semester' => 'required',
+            'enrollment_id' => 'required|exists:enrollments,id',
+            'letter_grade' => 'required',
+            'semester_id' => 'required|exists:semesters,id',
         ]);
 
         Grade::create($request->all());
@@ -44,10 +43,9 @@ class GradeController extends Controller
     public function update(Request $request, Grade $grade)
     {
         $request->validate([
-            'student_id' => 'required|exists:students,id',
-            'course_id' => 'required|exists:courses,id',
-            'grade' => 'required',
-            'semester' => 'required',
+            'enrollment_id' => 'required|exists:enrollments,id',
+            'letter_grade' => 'required',
+            'semester_id' => 'required|exists:semesters,id',
         ]);
 
         $grade->update($request->all());
@@ -69,11 +67,10 @@ class GradeController extends Controller
         foreach ($request->grades as $gradeData) {
             Grade::updateOrCreate(
                 [
-                    'student_id' => $gradeData['student_id'],
-                    'course_id' => $gradeData['course_id'],
-                    'semester' => $gradeData['semester'],
+                    'enrollment_id' => $gradeData['enrollment_id'],
+                    'semester_id' => $gradeData['semester_id'],
                 ],
-                ['grade' => $gradeData['grade']]
+                ['letter_grade' => $gradeData['letter_grade']]
             );
         }
 
