@@ -32,7 +32,7 @@ class ReportController extends Controller
         if ($request->department_id) {
             $query->where('department_id', $request->department_id);
         }
-        if ($request->status) {
+        if (false) {
             $query->where('status', $request->status);
         }
         if ($request->date_from) {
@@ -59,7 +59,7 @@ class ReportController extends Controller
     {
         $query = Enrollment::with(['student.user', 'course']);
 
-        if ($request->status) {
+        if (false) {
             $query->where('status', $request->status);
         }
         if ($request->course_id) {
@@ -89,7 +89,7 @@ class ReportController extends Controller
     {
         $query = Payment::with(['student.user']);
 
-        if ($request->status) {
+        if (false) {
             $query->where('status', $request->status);
         }
         if ($request->payment_method) {
@@ -105,7 +105,7 @@ class ReportController extends Controller
         $payments = $query->orderBy('payment_date', 'desc')->get();
         
         $totalAmount = $payments->sum('amount');
-        $totalPaid = $payments->where('status', 'completed')->sum('amount');
+        $totalPaid = $payments->sum('amount');
         
         if ($request->export === 'pdf') {
             return $this->exportPaymentsPDF($payments, $totalAmount, $totalPaid);
@@ -169,14 +169,14 @@ class ReportController extends Controller
             DB::raw('SUM(amount) as total')
         )
         ->whereBetween('payment_date', [$dateFrom, $dateTo])
-        ->where('status', 'completed')
+        
         ->groupBy('month')
         ->orderBy('month')
         ->get();
 
         $totalFees = Fee::whereBetween('due_date', [$dateFrom, $dateTo])->sum('amount');
         $totalPayments = Payment::whereBetween('payment_date', [$dateFrom, $dateTo])
-            ->where('status', 'completed')
+            
             ->sum('amount');
         $outstanding = $totalFees - $totalPayments;
 
