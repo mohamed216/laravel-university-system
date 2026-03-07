@@ -29,8 +29,8 @@ class DashboardController extends Controller
             'new_students' => Student::where('status', 'new')->count(),
             'graduated_students' => Student::where('status', 'graduated')->count(),
             'pending_enrollments' => Enrollment::where('status', 'pending')->count(),
-            'total_payments' => Payment::where('status', 'completed')->sum('amount'),
-            'pending_payments' => Payment::where('status', 'pending')->sum('amount'),
+            'total_payments' => Payment::sum('amount'),
+            'pending_payments' => 0,
         ];
 
         // Recent items
@@ -53,7 +53,7 @@ class DashboardController extends Controller
             DB::raw('SUM(amount) as total')
         )
         ->where('payment_date', '>=', Carbon::now()->subMonths(12)->toDateString())
-        ->where('status', 'completed')
+        
         ->groupBy('month')
         ->orderBy('month')
         ->get();
