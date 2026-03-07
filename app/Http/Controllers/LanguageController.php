@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\App;
 
 class LanguageController extends Controller
 {
@@ -15,22 +16,28 @@ class LanguageController extends Controller
             $locale = 'en';
         }
 
-        app()->setLocale($locale);
-        session(['locale' => $locale]);
-        session(['rtl' => $locale === 'ar']);
+        // Set locale in session
+        $request->session()->put('locale', $locale);
+        $request->session()->put('rtl', $locale === 'ar');
+        
+        // Set locale for current request
+        App::setLocale($locale);
 
         return redirect()->back();
     }
 
-    public function setLocale(string $locale)
+    public function setLocale(Request $request, string $locale)
     {
         if (!in_array($locale, ['en', 'ar'])) {
             $locale = 'en';
         }
 
-        app()->setLocale($locale);
-        session(['locale' => $locale]);
-        session(['rtl' => $locale === 'ar']);
+        // Set locale in session
+        $request->session()->put('locale', $locale);
+        $request->session()->put('rtl', $locale === 'ar');
+        
+        // Set locale for current request
+        App::setLocale($locale);
 
         return redirect()->back();
     }
