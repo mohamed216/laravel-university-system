@@ -42,7 +42,7 @@ Route::middleware(['auth'])->group(function () {
     });
     
     // Courses (Admin + Professors)
-    Route::middleware(['role.admin,professor'])->group(function () {
+    Route::middleware(['role.admin', 'professor'])->group(function () {
         Route::resource('courses', CourseController::class);
         Route::resource('enrollments', EnrollmentController::class);
         Route::post('/enrollments/approve/{enrollment}', [EnrollmentController::class, 'approve'])->name('enrollments.approve');
