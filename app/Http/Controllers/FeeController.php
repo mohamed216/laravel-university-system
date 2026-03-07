@@ -9,7 +9,7 @@ class FeeController extends Controller
 {
     public function index()
     {
-        $fees = Fee::with('student')->get();
+        $fees = Fee::with('student')->paginate(10);
         return view('fees.index', compact('fees'));
     }
 

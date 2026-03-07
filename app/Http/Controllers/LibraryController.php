@@ -9,7 +9,7 @@ class LibraryController extends Controller
 {
     public function index()
     {
-        $libraryRecords = Library::with('student')->get();
+        $libraryRecords = Library::with('student')->paginate(10);
         return view('library.index', compact('libraryRecords'));
     }
 

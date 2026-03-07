@@ -9,7 +9,7 @@ class FacultyController extends Controller
 {
     public function index()
     {
-        $faculties = Faculty::with('departments')->get();
+        $faculties = Faculty::with('departments')->paginate(10);
         return view('faculties.index', compact('faculties'));
     }
 

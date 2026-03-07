@@ -9,7 +9,7 @@ class ProfessorController extends Controller
 {
     public function index()
     {
-        $professors = Professor::with('department')->get();
+        $professors = Professor::with('department')->paginate(10);
         return view('professors.index', compact('professors'));
     }
 
