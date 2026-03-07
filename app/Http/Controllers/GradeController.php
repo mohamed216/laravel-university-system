@@ -9,7 +9,7 @@ class GradeController extends Controller
 {
     public function index()
     {
-        $grades = Grade::with(['student', 'course'])->paginate(10);
+        $grades = Grade::with(['enrollment.student', 'enrollment.courseSection', 'semester'])->paginate(10);
         return view('grades.index', compact('grades'));
     }
 

@@ -9,7 +9,7 @@ class AttendanceController extends Controller
 {
     public function index()
     {
-        $attendances = Attendance::with(['student', 'course'])->paginate(10);
+        $attendances = Attendance::with(['student', 'courseSection'])->paginate(10);
         return view('attendances.index', compact('attendances'));
     }
 

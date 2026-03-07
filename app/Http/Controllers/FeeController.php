@@ -9,7 +9,7 @@ class FeeController extends Controller
 {
     public function index()
     {
-        $fees = Fee::with('student')->paginate(10);
+        $fees = Fee::with('academicYear')->paginate(10);
         return view('fees.index', compact('fees'));
     }
 

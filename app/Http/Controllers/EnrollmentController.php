@@ -9,7 +9,7 @@ class EnrollmentController extends Controller
 {
     public function index()
     {
-        $enrollments = Enrollment::with(['student', 'course'])->paginate(10);
+        $enrollments = Enrollment::with(['student', 'courseSection'])->paginate(10);
         return view('enrollments.index', compact('enrollments'));
     }
 
@@ -22,8 +22,8 @@ class EnrollmentController extends Controller
     {
         $request->validate([
             'student_id' => 'required|exists:students,id',
-            'course_id' => 'required|exists:courses,id',
-            'semester' => 'required',
+            'course_section_id' => 'required|exists:course_sections,id',
+            'semester_id' => 'required|exists:semesters,id',
         ]);
 
         Enrollment::create($request->all());
@@ -44,8 +44,8 @@ class EnrollmentController extends Controller
     {
         $request->validate([
             'student_id' => 'required|exists:students,id',
-            'course_id' => 'required|exists:courses,id',
-            'semester' => 'required',
+            'course_section_id' => 'required|exists:course_sections,id',
+            'semester_id' => 'required|exists:semesters,id',
         ]);
 
         $enrollment->update($request->all());

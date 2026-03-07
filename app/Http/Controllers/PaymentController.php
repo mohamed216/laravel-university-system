@@ -29,7 +29,10 @@ class PaymentController extends Controller
             'status' => 'required',
         ]);
 
-        Payment::create($request->all());
+        $paymentData = $request->all();
+        $paymentData['receipt_number'] = Payment::generateReceiptNumber();
+
+        Payment::create($paymentData);
         return redirect()->route('payments.index')->with('success', __('Payment created successfully'));
     }
 
