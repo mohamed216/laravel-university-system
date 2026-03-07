@@ -17,11 +17,15 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\LanguageController;
 
 // Public Routes
 Route::get('/', function () {
     return redirect('/login');
 });
+
+// Language Routes
+Route::get('/language/{locale}', [LanguageController::class, 'setLocale'])->name('language.switch');
 
 // Auth Routes
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');

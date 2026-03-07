@@ -104,6 +104,16 @@
                     <div class="container-fluid">
                         <span class="navbar-brand mb-0 h1">@yield('title', __('Dashboard'))</span>
                         <div class="d-flex align-items-center">
+                            <!-- Language Switcher -->
+                            <div class="dropdown me-3">
+                                <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                    <i class="bi bi-globe"></i> {{ app()->getLocale() == 'ar' ? 'العربية' : 'English' }}
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="{{ route('language.switch', 'en') }}">English</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('language.switch', 'ar') }}">العربية</a></li>
+                                </ul>
+                            </div>
                             <span class="me-3">{{ auth()->user()->name }}</span>
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
