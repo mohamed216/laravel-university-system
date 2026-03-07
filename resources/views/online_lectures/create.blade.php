@@ -42,6 +42,14 @@
                     <input type="number" name="duration_minutes" class="form-control" value="60" required>
                 </div>
                 <div class="col-md-6 mb-3">
+                    <label class="form-label">{{ __('Open Access Time') }}</label>
+                    <input type="datetime-local" name="open_access_at" class="form-control">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">{{ __('Close Access Time') }}</label>
+                    <input type="datetime-local" name="close_access_at" class="form-control">
+                </div>
+                <div class="col-md-6 mb-3">
                     <label class="form-label">{{ __('Meeting Link') }}</label>
                     <input type="url" name="meeting_link" class="form-control" placeholder="https://zoom.us/...">
                 </div>

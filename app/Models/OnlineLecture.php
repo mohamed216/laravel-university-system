@@ -24,11 +24,15 @@ class OnlineLecture extends Model
         'notes',
         'is_recording_enabled',
         'recording_url',
+        'open_access_at',
+        'close_access_at',
     ];
 
     protected $casts = [
         'scheduled_at' => 'datetime',
         'is_recording_enabled' => 'boolean',
+        'open_access_at' => 'datetime',
+        'close_access_at' => 'datetime',
     ];
 
     public function courseSection()
@@ -54,6 +58,18 @@ class OnlineLecture extends Model
     public function isLive()
     {
         return $this->status === 'live';
+    }
+
+    public function canJoin()
+    {
+        $now = now();
+        if ($this->open_access_at && $now < $this->open_access_at) {
+            return false;
+        }
+        if ($this->close_access_at && $now > $this->close_access_at) {
+            return false;
+        }
+        return in_array($this->status, ['scheduled', 'live']);
     }
 
     public function isUpcoming()

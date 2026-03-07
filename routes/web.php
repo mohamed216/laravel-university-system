@@ -112,3 +112,7 @@ Route::middleware(['role:admin,professor'])->group(function () {
 Route::middleware(['auth'])->group(function () {
     Route::get('/my-lectures', [OnlineLectureController::class, 'myLectures'])->name('online-lectures.my');
 });
+
+
+// Student can check if they can join a lecture
+Route::get('/online-lectures/{lecture}/join', [OnlineLectureController::class, 'joinLecture'])->name('online-lectures.join');

@@ -233,4 +233,8 @@
   'Start Live' => 'بدء البث',
   'End Live' => 'إنهاء البث',
   'My Lectures' => 'محاضراتي',
+  'Open Access Time' => 'وقت فتح الدخول',
+  'Close Access Time' => 'وقت غلق الدخول',
+  'Cannot join now' => 'لا يمكن الدخول الآن',
+  'Join now' => 'ادخل الآن',
 );

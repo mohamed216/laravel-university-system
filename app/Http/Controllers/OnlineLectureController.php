@@ -44,6 +44,8 @@ class OnlineLectureController extends Controller
             'video_url' => 'nullable|url',
             'scheduled_at' => 'required|date',
             'duration_minutes' => 'required|integer|min:15',
+            'open_access_at' => 'nullable|date',
+            'close_access_at' => 'nullable|date|after:open_access_at',
         ]);
 
         OnlineLecture::create($request->all());
@@ -73,6 +75,8 @@ class OnlineLectureController extends Controller
             'video_url' => 'nullable|url',
             'scheduled_at' => 'required|date',
             'duration_minutes' => 'required|integer|min:15',
+            'open_access_at' => 'nullable|date',
+            'close_access_at' => 'nullable|date|after:open_access_at',
         ]);
 
         $onlineLecture->update($request->all());
@@ -97,3 +101,13 @@ class OnlineLectureController extends Controller
         return redirect()->back()->with('success', __('Lecture ended'));
     }
 }
+
+
+    public function joinLecture(OnlineLecture $lecture)
+    {
+        if (!$lecture->canJoin()) {
+            return redirect()->back()->with('error', __('Cannot join now'));
+        }
+        
+        return redirect($lecture->meeting_link);
+    }
