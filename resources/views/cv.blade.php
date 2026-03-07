@@ -193,7 +193,7 @@
         </tr>
         <tr>
             <td>English</td>
-            <td>Fluent</td>
+            <td>Intermediate</td>
         </tr>
     </table>
 
