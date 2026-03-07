@@ -14,8 +14,6 @@
         table { width: 100%; border-collapse: collapse; margin: 15px 0; }
         th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #e2e8f0; }
         th { background-color: #3182ce; color: white; font-weight: 600; }
-        th:first-child { border-radius: 6px 0 0 0; }
-        th:last-child { border-radius: 0 6px 0 0; }
         .header { text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 3px solid #3182ce; }
         .contact-info { color: #4a5568; font-size: 0.95em; }
         .contact-info span { margin: 0 10px; }
@@ -37,169 +35,88 @@
     </style>
 </head>
 <body>
-
     <div class="header">
         <h1>Mohamed Arabi</h1>
         <p style="font-size: 1.2em; color: #4a5568;">Full Stack Developer</p>
         <div class="contact-info">
-            <span>📱 +966 558293901</span>
-            <span>📧 mhmed216@gmail.com</span>
+            <span>+966 558293901</span>
+            <span>mhmed216@gmail.com</span>
             <br>
-            <span>🌐 github.com/mohamed216</span>
-            <span>📍 Riyadh, KSA</span>
+            <span>github.com/mohamed216</span>
+            <span>Riyadh, KSA</span>
         </div>
     </div>
-
     <div class="summary">
-        <p><strong>Professional Summary:</strong> Experienced Full Stack Developer with 5+ years of experience in web and mobile application development. Specialized in Laravel framework and Flutter mobile development. Proven track record of delivering scalable solutions for enterprise applications. Strong problem-solving skills with ability to work under pressure.</p>
+        <p><strong>Professional Summary:</strong> Experienced Full Stack Developer with 5+ years in web and mobile app development. Specialized in Laravel and Flutter. Delivered scalable enterprise solutions. Strong problem-solving skills.</p>
     </div>
-
-    <h2>🎓 Education</h2>
+    <h2>Education</h2>
     <table>
-        <tr>
-            <th>Institution</th>
-            <th>Qualification</th>
-            <th>Year</th>
-        </tr>
-        <tr>
-            <td>New Castle College, Sudan</td>
-            <td>Bachelor of Science in Information Technology</td>
-            <td>2017</td>
-        </tr>
-        <tr>
-            <td>Omdurman Alahlia University, Sudan</td>
-            <td>Diploma in Information Technology</td>
-            <td>2013</td>
-        </tr>
-        <tr>
-            <td>Cisco Networking Academy</td>
-            <td>CCNA Certification</td>
-            <td>2016</td>
-        </tr>
+        <tr><th>Institution</th><th>Qualification</th><th>Year</th></tr>
+        <tr><td>New Castle College</td><td>BSc Information Technology</td><td>2017</td></tr>
+        <tr><td>Omdurman Alahlia University</td><td>Diploma in IT</td><td>2013</td></tr>
+        <tr><td>Cisco Networking Academy</td><td>CCNA</td><td>2016</td></tr>
     </table>
-
-    <h2>💻 Technical Skills</h2>
+    <h2>Technical Skills</h2>
     <div class="skills-container">
         <div class="skill-box">
-            <h4>Backend Development</h4>
+            <h4>Backend</h4>
             <ul>
                 <li>PHP / Laravel</li>
-                <li>Python / Django</li>
-                <li>RESTful API Development</li>
-                <li>MySQL / SQL Server</li>
+                <li>Python</li>
+                <li>RESTful API</li>
+                <li>MySQL</li>
             </ul>
         </div>
         <div class="skill-box">
-            <h4>Mobile Development</h4>
+            <h4>Mobile</h4>
             <ul>
                 <li>Flutter / Dart</li>
-                <li>GetX State Management</li>
-                <li>Firebase Integration</li>
-                <li>Provider</li>
+                <li>GetX</li>
+                <li>Firebase</li>
             </ul>
         </div>
         <div class="skill-box">
-            <h4>Frontend</h4>
+            <h4>AI Tools</h4>
             <ul>
-                <li>HTML5 / CSS3</li>
-                <li>JavaScript</li>
-                <li>Bootstrap 5</li>
-                <li>Blade Templates</li>
+                <li>ChatGPT</li>
+                <li>Claude</li>
+                <li>OpenAI</li>
             </ul>
         </div>
         <div class="skill-box">
-            <h4>Tools & Other</h4>
+            <h4>Tools</h4>
             <ul>
                 <li>Git / GitHub</li>
-                <li>Linux Server Administration</li>
-                <li>Network Administration (CCNA)</li>
-                <li>Visual Studio Code</li>
+                <li>Linux Server</li>
+                <li>Network Admin (CCNA)</li>
             </ul>
         </div>
     </div>
-
-    <h2>💼 Professional Experience</h2>
-
+    <h2>Experience</h2>
     <div class="job-card">
         <h3>Full Stack Developer</h3>
         <p class="job-period">2022 - Present | Freelance</p>
         <ul>
-            <li>Developed and maintained multiple web applications using Laravel framework</li>
-            <li>Built cross-platform mobile applications using Flutter</li>
-            <li>Implemented RESTful APIs for mobile and web integration</li>
-            <li>Collaborated with clients to understand requirements and deliver solutions</li>
-            <li>Managed database design and optimization</li>
+            <li>Developed web apps with Laravel</li>
+            <li>Built mobile apps with Flutter</li>
+            <li>Implemented RESTful APIs</li>
+            <li>Database design and optimization</li>
         </ul>
     </div>
-
     <div class="job-card">
         <h3>Flutter Developer</h3>
-        <p class="job-period">July 2022 - October 2022 | Sands Company, KSA</p>
+        <p class="job-period">2022 | Sands Company, KSA</p>
         <ul>
-            <li>Developed complete food delivery mobile application</li>
-            <li>Implemented user authentication and payment integration</li>
-            <li>Built real-time features for order tracking</li>
-            <li>Worked with Firebase for backend services</li>
+            <li>Built food delivery app</li>
+            <li>Firebase integration</li>
         </ul>
     </div>
-
-    <div class="job-card">
-        <h3>Network Administrator & IT Support</h3>
-        <p class="job-period">January 2014 - January 2015 | National Health Insurance Fund, Sudan</p>
-        <ul>
-            <li>Managed network infrastructure and IT systems</li>
-            <li>Provided technical support to end users</li>
-            <li>Maintained system security and backups</li>
-            <li>Installed and configured hardware and software</li>
-        </ul>
-    </div>
-
-    <h2>🚀 Notable Projects</h2>
-
-    <div class="project-card">
-        <h3>University Management System <span class="badge">Laravel</span></h3>
-        <p>Comprehensive university management system with student enrollment, course management, attendance tracking, grading, fee management, library system, and online lecture integration. Features include multi-language support (Arabic/English), role-based access control, and administrative dashboards.</p>
-    </div>
-
-    <div class="project-card">
-        <h3>HR Management System <span class="badge">Laravel</span></h3>
-        <p>Employee management system with attendance tracking, leave requests, payroll calculation, and performance reviews. Includes PDF/Excel exports and multi-language support.</p>
-    </div>
-
-    <div class="project-card">
-        <h3>Food Delivery Platform <span class="badge green">Flutter</span></h3>
-        <p>Complete food delivery ecosystem with customer app, seller portal, rider app, and admin panel. Real-time order tracking, push notifications, and payment integration.</p>
-    </div>
-
-    <div class="project-card">
-        <h3>Hospital Management System <span class="badge">Laravel</span></h3>
-        <p>Healthcare management system for patient records, appointments, and medical billing.</p>
-    </div>
-
-    <div class="project-card">
-        <h3>E-Commerce Platform <span class="badge">Laravel</span></h3>
-        <p>Full-featured online store with shopping cart, payment gateway integration, and admin panel.</p>
-    </div>
-
-    <h2>🌐 Languages</h2>
-    <table>
-        <tr>
-            <th>Language</th>
-            <th>Proficiency</th>
-        </tr>
-        <tr>
-            <td>Arabic</td>
-            <td>Native</td>
-        </tr>
-        <tr>
-            <td>English</td>
-            <td>Intermediate</td>
-        </tr>
-    </table>
-
-    <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #e2e8f0; text-align: center; color: #718096; font-size: 0.9em;">
-        <p>Last Updated: March 2026</p>
-    </div>
-
+    <h2>Projects</h2>
+    <div class="project-card"><h3>University Management System <span class="badge">Laravel</span></h3><p>Student enrollment, courses, attendance, grades, fees, library, online lectures. Multi-language (Arabic/English).</p></div>
+    <div class="project-card"><h3>HR Management System <span class="badge">Laravel</span></h3><p>Employee management, attendance, leave requests, payroll.</p></div>
+    <div class="project-card"><h3>Food Delivery Platform <span class="badge green">Flutter</span></h3><p>Customer, seller, rider apps + admin panel.</p></div>
+    <h2>Languages</h2>
+    <table><tr><td>Arabic</td><td>Native</td></tr><tr><td>English</td><td>Intermediate</td></tr></table>
+    <div style="margin-top:40px;text-align:center;color:#718096;font-size:0.9em"><p>Last Updated: March 2026</p></div>
 </body>
 </html>
