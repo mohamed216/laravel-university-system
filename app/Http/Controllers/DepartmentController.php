@@ -11,7 +11,8 @@ class DepartmentController extends Controller
     public function index()
     {
         $departments = Department::with('faculty')->get();
-        return view('departments.index', compact('departments'));
+        $faculties = Faculty::all();
+        return view('departments.index', compact('departments', 'faculties'));
     }
 
     public function create()
