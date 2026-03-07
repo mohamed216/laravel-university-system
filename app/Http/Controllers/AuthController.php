@@ -59,14 +59,15 @@ class AuthController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed',
-            'role' => 'required|in:student,professor',
         ]);
 
+        // Security: Only allow student registration through public form
+        // Professors and admins must be created by admins
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => bcrypt($request->password),
-            'role' => $request->role,
+            'role' => 'student',
         ]);
 
         Auth::login($user);

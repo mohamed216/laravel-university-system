@@ -95,7 +95,7 @@
             
             <div class="text-center">
                 <a href="{{ route('register') }}" class="text-decoration-none">
-                    {{ __('Register') }} {{ __('Student') }} / {{ __('Professor') }}
+                    {{ __('Register') }}
                 </a>
             </div>
         </div>

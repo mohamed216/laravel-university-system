@@ -73,15 +73,6 @@
                     <input type="password" name="password_confirmation" class="form-control" required>
                 </div>
 
-                <div class="mb-3">
-                    <label class="form-label">{{ __('Register as') }}</label>
-                    <select name="role" class="form-select" required>
-                        <option value="">-- Select --</option>
-                        <option value="student">{{ __('Student') }}</option>
-                        <option value="professor">{{ __('Professor') }}</option>
-                    </select>
-                </div>
-
                 <button type="submit" class="btn btn-primary btn-register w-100">
                     <i class="bi bi-person-plus"></i> {{ __('Register') }}
                 </button>
