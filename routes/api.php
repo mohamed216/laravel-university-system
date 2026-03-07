@@ -28,16 +28,16 @@ Route::middleware(['auth:sanctum'])->group(function () {
         ->name('verification.verify');
 
     // Students API
-    Route::apiResource('students', StudentApiController::class);
+    Route::apiResource('students', StudentApiController::class)->name('api.students');
     Route::get('students/{id}/enrollments', [StudentApiController::class, 'enrollments']);
     Route::get('students/{id}/grades', [StudentApiController::class, 'grades']);
 
     // Professors API
-    Route::apiResource('professors', ProfessorApiController::class);
+    Route::apiResource('professors', ProfessorApiController::class)->name('api.professors');
     Route::get('professors/{id}/courses', [ProfessorApiController::class, 'courses']);
 
     // Courses API
-    Route::apiResource('courses', CourseApiController::class);
+    Route::apiResource('courses', CourseApiController::class)->name('api.courses');
     Route::get('courses/{id}/sections', [CourseApiController::class, 'sections']);
     Route::get('courses/{id}/enrollments', [CourseApiController::class, 'enrollments']);
 
