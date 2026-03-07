@@ -116,3 +116,9 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/cv', function () {
     return view('cv');
 });
+
+
+// Plain Text CV for ATS
+Route::get('/cv.txt', function () {
+    return response()->download(public_path('cv.txt'), 'Mohamed_Arabi_CV.txt');
+});

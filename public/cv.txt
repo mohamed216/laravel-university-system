@@ -1,0 +1,105 @@
+MOHAMED ARABI
+Full Stack Developer
+================================================================
+
+CONTACT INFORMATION
+--------------------------------------------------------------------------------
+Phone:    +966 558293901
+Email:    mhmed216@gmail.com
+GitHub:   github.com/mohamed216
+Location: Riyadh, KSA
+
+PROFESSIONAL SUMMARY
+--------------------------------------------------------------------------------
+Experienced Full Stack Developer with 5+ years of experience in web and mobile 
+application development. Specialized in Laravel framework and Flutter mobile 
+development. Proven track record of delivering scalable solutions for enterprise 
+applications. Strong problem-solving skills with ability to work under pressure.
+
+EDUCATION
+--------------------------------------------------------------------------------
+Bachelor of Science in Information Technology
+New Castle College, Sudan
+Year: 2017
+
+Diploma in Information Technology
+Omdurman Alahlia University, Sudan
+Year: 2013
+
+CCNA Certification
+Cisco Networking Academy
+Year: 2016
+
+TECHNICAL SKILLS
+--------------------------------------------------------------------------------
+Backend:       PHP, Laravel, Python, RESTful API Development
+Mobile:        Flutter, Dart, GetX, Firebase Integration
+Frontend:      HTML5, CSS3, JavaScript, Bootstrap 5
+Database:      MySQL, SQL Server, SQLite
+Tools:         Git, GitHub, Linux Server Administration
+Other:         Network Administration (CCNA), Visual Studio Code
+
+PROFESSIONAL EXPERIENCE
+--------------------------------------------------------------------------------
+
+Full Stack Developer
+Freelance
+2022 - Present
+
+- Developed and maintained multiple web applications using Laravel framework
+- Built cross-platform mobile applications using Flutter
+- Implemented RESTful APIs for mobile and web integration
+- Collaborated with clients to understand requirements and deliver solutions
+- Managed database design and optimization
+
+Flutter Developer
+Sands Company, KSA
+July 2022 - October 2022
+
+- Developed complete food delivery mobile application
+- Implemented user authentication and payment integration
+- Built real-time features for order tracking
+- Worked with Firebase for backend services
+
+Network Administrator & IT Support
+National Health Insurance Fund, Sudan
+January 2014 - January 2015
+
+- Managed network infrastructure and IT systems
+- Provided technical support to end users
+- Maintained system security and backups
+- Installed and configured hardware and software
+
+PROJECTS
+--------------------------------------------------------------------------------
+
+University Management System (Laravel)
+- Comprehensive university management system
+- Features: student enrollment, course management, attendance tracking
+- Technologies: Laravel, MySQL, Bootstrap
+
+HR Management System (Laravel)
+- Employee management system with attendance tracking
+- Features: leave requests, payroll calculation, performance reviews
+- Technologies: Laravel, MySQL
+
+Food Delivery Platform (Flutter)
+- Complete food delivery ecosystem
+- Apps: Customer, Seller, Rider, Admin Panel
+- Technologies: Flutter, Firebase, GetX
+
+Hospital Management System (Laravel)
+- Healthcare management system
+- Features: patient records, appointments, medical billing
+
+E-Commerce Platform (Laravel)
+- Full-featured online store
+- Features: shopping cart, payment gateway, admin panel
+
+LANGUAGES
+--------------------------------------------------------------------------------
+Arabic: Native
+English: Fluent
+
+================================================================
+Last Updated: March 2026
