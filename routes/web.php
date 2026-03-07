@@ -18,6 +18,7 @@ use App\Http\Controllers\ReportController;
 use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\LanguageController;
+use App\Http\Controllers\OnlineLectureController;
 
 // Public Routes
 Route::get('/', function () {
