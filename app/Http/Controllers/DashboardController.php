@@ -39,10 +39,10 @@ class DashboardController extends Controller
         
         // Student Enrollment Trends (Last 12 months)
         $enrollmentTrends = Student::select(
-            DB::raw('DATE_FORMAT(enrollment_date, "%Y-%m") as month'),
+            DB::raw('DATE_FORMAT(admission_date, "%Y-%m") as month'),
             DB::raw('COUNT(*) as count')
         )
-        ->where('enrollment_date', '>=', Carbon::now()->subMonths(12)->toDateString())
+        ->where('admission_date', '>=', Carbon::now()->subMonths(12)->toDateString())
         ->groupBy('month')
         ->orderBy('month')
         ->get();
