@@ -37,7 +37,7 @@
                     </tr>
                     <tr>
                         <th>{{ __('Email') }}:</th>
-                        <td>{{ $student->email }}</td>
+                        <td>{{ $student->user->email }}</td>
                     </tr>
                     <tr>
                         <th>{{ __('Phone') }}:</th>
@@ -88,7 +88,7 @@
                     </tr>
                     <tr>
                         <th>{{ __('Credits') }}:</th>
-                        <td>{{ $student->earned_credits }}</td>
+                        <td>{{ $student->total_credits }}</td>
                     </tr>
                     <tr>
                         <th>{{ __('Status') }}:</th>
@@ -100,7 +100,7 @@
                     </tr>
                     <tr>
                         <th>{{ __('Enrollment Date') }}:</th>
-                        <td>{{ $student->enrollment_date }}</td>
+                        <td>{{ $student->admission_date }}</td>
                     </tr>
                 </table>
             </div>

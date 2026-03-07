@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-md-6 mb-3">
                     <label class="form-label">{{ __('Email') }} *</label>
-                    <input type="email" name="email" class="form-control" value="{{ $student->email }}" required>
+                    <input type="email" name="email" class="form-control" value="{{ $student->user->email }}" required>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label class="form-label">{{ __('Password') }}</label>

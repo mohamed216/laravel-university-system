@@ -22,12 +22,28 @@ class ProfessorController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'email' => 'required|email|unique:professors',
+            'email' => 'required|email|unique:users',
             'phone' => 'required',
             'department_id' => 'required|exists:departments,id',
         ]);
 
-        Professor::create($request->all());
+        $user = \App\Models\User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password ?? 'password'),
+            'role' => 'professor',
+        ]);
+
+        Professor::create([
+            'user_id' => $user->id,
+            'department_id' => $request->department_id,
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'title' => $request->title,
+            'specialization' => $request->specialization,
+        ]);
+
         return redirect()->route('professors.index')->with('success', __('Professor created successfully'));
     }
 
