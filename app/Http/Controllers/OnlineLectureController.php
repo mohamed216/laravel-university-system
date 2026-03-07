@@ -100,8 +100,6 @@ class OnlineLectureController extends Controller
         $onlineLecture->update(['status' => 'completed']);
         return redirect()->back()->with('success', __('Lecture ended'));
     }
-}
-
 
     public function joinLecture(OnlineLecture $lecture)
     {
@@ -111,3 +109,4 @@ class OnlineLectureController extends Controller
         
         return redirect($lecture->meeting_link);
     }
+}
