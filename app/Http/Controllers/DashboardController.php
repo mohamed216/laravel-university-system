@@ -39,7 +39,7 @@ class DashboardController extends Controller
         
         // Student Enrollment Trends (Last 12 months)
         $enrollmentTrends = Student::select(
-            DB::raw('strftime("%Y-%m", enrollment_date) as month'),
+            DB::raw('DATE_FORMAT(enrollment_date, "%Y-%m") as month'),
             DB::raw('COUNT(*) as count')
         )
         ->where('enrollment_date', '>=', Carbon::now()->subMonths(12)->toDateString())
@@ -49,7 +49,7 @@ class DashboardController extends Controller
         
         // Fee Collection Trends (Last 12 months)
         $feeTrends = Payment::select(
-            DB::raw('strftime("%Y-%m", payment_date) as month'),
+            DB::raw('DATE_FORMAT(payment_date, "%Y-%m") as month'),
             DB::raw('SUM(amount) as total')
         )
         ->where('payment_date', '>=', Carbon::now()->subMonths(12)->toDateString())
