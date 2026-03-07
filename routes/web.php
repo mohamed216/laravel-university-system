@@ -37,7 +37,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Protected Routes (require authentication)
 Route::middleware(['auth'])->group(function () {
-    // Dashboard - accessible to all authenticated users
+    // Dashboard
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     
     // Reports - Admin only
@@ -56,7 +56,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/activities/{activity}', [ActivityController::class, 'show'])->name('activities.show');
     });
     
-    // My Activity - All authenticated users
+    // My Activity
     Route::get('/my-activity', [ActivityController::class, 'userActivity'])->name('activities.user');
     
     // Settings - Admin only
@@ -94,25 +94,19 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/payments/receipt/{payment}', [PaymentController::class, 'receipt'])->name('payments.receipt');
     });
     
-    // Library - accessible to all
+    // Library
     Route::resource('library', LibraryController::class);
     Route::post('/library/borrow', [LibraryController::class, 'borrow'])->name('library.borrow');
     Route::post('/library/return', [LibraryController::class, 'returnBook'])->name('library.return');
-});
-
-
-// Online Lectures Routes
-Route::middleware(['role:admin,professor'])->group(function () {
-    Route::resource('online-lectures', OnlineLectureController::class);
-    Route::post('/online-lectures/{onlineLecture}/start', [OnlineLectureController::class, 'startLive'])->name('online-lectures.start');
-    Route::post('/online-lectures/{onlineLecture}/end', [OnlineLectureController::class, 'endLive'])->name('online-lectures.end');
-});
-
-// Student Online Lectures (view only)
-Route::middleware(['auth'])->group(function () {
+    
+    // Online Lectures - Admin + Professor can manage
+    Route::middleware(['role:admin,professor'])->group(function () {
+        Route::resource('online-lectures', OnlineLectureController::class);
+        Route::post('/online-lectures/{onlineLecture}/start', [OnlineLectureController::class, 'startLive'])->name('online-lectures.start');
+        Route::post('/online-lectures/{onlineLecture}/end', [OnlineLectureController::class, 'endLive'])->name('online-lectures.end');
+    });
+    
+    // Student Online Lectures
     Route::get('/my-lectures', [OnlineLectureController::class, 'myLectures'])->name('online-lectures.my');
+    Route::get('/online-lectures/{lecture}/join', [OnlineLectureController::class, 'joinLecture'])->name('online-lectures.join');
 });
-
-
-// Student can check if they can join a lecture
-Route::get('/online-lectures/{lecture}/join', [OnlineLectureController::class, 'joinLecture'])->name('online-lectures.join');
