@@ -28,41 +28,14 @@ Route::middleware(['auth:sanctum'])->group(function () {
         ->name('verification.verify');
 
     // Students API
-    Route::apiResource('students', StudentApiController::class)->name('api.students');
+    Route::apiResource('students', StudentApiController::class)->names('api.students');
     Route::get('students/{id}/enrollments', [StudentApiController::class, 'enrollments']);
     Route::get('students/{id}/grades', [StudentApiController::class, 'grades']);
 
     // Professors API
-    Route::apiResource('professors', ProfessorApiController::class)->name('api.professors');
+    Route::apiResource('professors', ProfessorApiController::class)->names('api.professors');
     Route::get('professors/{id}/courses', [ProfessorApiController::class, 'courses']);
 
     // Courses API
-    Route::apiResource('courses', CourseApiController::class)->name('api.courses');
-    Route::get('courses/{id}/sections', [CourseApiController::class, 'sections']);
-    Route::get('courses/{id}/enrollments', [CourseApiController::class, 'enrollments']);
-
-    // Additional API endpoints
-    Route::get('departments', function () {
-        return \App\Models\Department::with('faculty')->get();
-    });
-
-    Route::get('faculties', function () {
-        return \App\Models\Faculty::all();
-    });
-
-    Route::get('academic-years', function () {
-        return \App\Models\AcademicYear::all();
-    });
-
-    Route::get('semesters', function () {
-        return \App\Models\Semester::with('academicYear')->get();
-    });
-
-    // Notifications API
-    Route::get('notifications', [App\Http\Controllers\NotificationController::class, 'getUnread']);
-    Route::post('notifications/{id}/read', [App\Http\Controllers\NotificationController::class, 'markAsRead']);
-    Route::post('notifications/read-all', [App\Http\Controllers\NotificationController::class, 'markAllAsRead']);
-
-    // Calendar API
-    Route::get('calendar/events', [App\Http\Controllers\CalendarController::class, 'events']);
+    Route::apiResource('courses', CourseApiController::class)->names('api.courses');
 });
