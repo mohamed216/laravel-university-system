@@ -29,11 +29,11 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Protected Routes (require authentication)
 Route::middleware(['auth'])->group(function () {
-    // Dashboard
+    // Dashboard - accessible to all authenticated users
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     
     // Admin only routes
-    Route::middleware(['role.admin'])->group(function () {
+    Route::middleware(['role:admin'])->group(function () {
         Route::resource('faculties', FacultyController::class);
         Route::resource('departments', DepartmentController::class);
         Route::resource('students', StudentController::class);
@@ -42,7 +42,7 @@ Route::middleware(['auth'])->group(function () {
     });
     
     // Courses (Admin + Professors)
-    Route::middleware(['role.admin', 'professor'])->group(function () {
+    Route::middleware(['role:admin,professor'])->group(function () {
         Route::resource('courses', CourseController::class);
         Route::resource('enrollments', EnrollmentController::class);
         Route::post('/enrollments/approve/{enrollment}', [EnrollmentController::class, 'approve'])->name('enrollments.approve');
@@ -54,12 +54,12 @@ Route::middleware(['auth'])->group(function () {
     });
     
     // Finance (Admin only)
-    Route::middleware(['role.admin'])->group(function () {
+    Route::middleware(['role:admin'])->group(function () {
         Route::resource('payments', PaymentController::class);
         Route::get('/payments/receipt/{payment}', [PaymentController::class, 'receipt'])->name('payments.receipt');
     });
     
-    // Library
+    // Library - accessible to all
     Route::resource('library', LibraryController::class);
     Route::post('/library/borrow', [LibraryController::class, 'borrow'])->name('library.borrow');
     Route::post('/library/return', [LibraryController::class, 'returnBook'])->name('library.return');
