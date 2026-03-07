@@ -14,6 +14,9 @@ use App\Http\Controllers\FeeController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\LibraryController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ReportController;
+use App\Http\Controllers\ActivityController;
+use App\Http\Controllers\SettingsController;
 
 // Public Routes
 Route::get('/', function () {
@@ -31,6 +34,33 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::middleware(['auth'])->group(function () {
     // Dashboard - accessible to all authenticated users
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    
+    // Reports - Admin only
+    Route::middleware(['role:admin'])->group(function () {
+        Route::get('/reports', [ReportController::class, 'index'])->name('reports.index');
+        Route::get('/reports/students', [ReportController::class, 'students'])->name('reports.students');
+        Route::get('/reports/enrollments', [ReportController::class, 'enrollments'])->name('reports.enrollments');
+        Route::get('/reports/payments', [ReportController::class, 'payments'])->name('reports.payments');
+        Route::get('/reports/grades', [ReportController::class, 'grades'])->name('reports.grades');
+        Route::get('/reports/finance', [ReportController::class, 'finance'])->name('reports.finance');
+    });
+    
+    // Activity Log - Admin only
+    Route::middleware(['role:admin'])->group(function () {
+        Route::get('/activities', [ActivityController::class, 'index'])->name('activities.index');
+        Route::get('/activities/{activity}', [ActivityController::class, 'show'])->name('activities.show');
+    });
+    
+    // My Activity - All authenticated users
+    Route::get('/my-activity', [ActivityController::class, 'userActivity'])->name('activities.user');
+    
+    // Settings - Admin only
+    Route::middleware(['role:admin'])->group(function () {
+        Route::get('/settings', [SettingsController::class, 'index'])->name('settings.index');
+        Route::post('/settings', [SettingsController::class, 'update'])->name('settings.update');
+        Route::post('/settings/logo', [SettingsController::class, 'logo'])->name('settings.logo');
+        Route::get('/settings/reset', [SettingsController::class, 'reset'])->name('settings.reset');
+    });
     
     // Admin only routes
     Route::middleware(['role:admin'])->group(function () {

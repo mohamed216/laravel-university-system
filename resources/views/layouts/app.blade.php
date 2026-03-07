@@ -81,6 +81,19 @@
                     <a href="{{ route('library.index') }}" class="{{ request()->routeIs('library.*') ? 'active' : '' }}">
                         <i class="bi bi-library me-2"></i> {{ __('Library') }}
                     </a>
+                    
+                    @role('admin')
+                    <hr class="my-2">
+                    <a href="{{ route('reports.index') }}" class="{{ request()->routeIs('reports.*') ? 'active' : '' }}">
+                        <i class="bi bi-file-earmark-bar-graph me-2"></i> {{ __('Reports') }}
+                    </a>
+                    <a href="{{ route('activities.index') }}" class="{{ request()->routeIs('activities.*') ? 'active' : '' }}">
+                        <i class="bi bi-activity me-2"></i> {{ __('Activity Log') }}
+                    </a>
+                    <a href="{{ route('settings.index') }}" class="{{ request()->routeIs('settings.*') ? 'active' : '' }}">
+                        <i class="bi bi-gear me-2"></i> {{ __('Settings') }}
+                    </a>
+                    @endrole
                 </div>
             </div>
             @endauth
