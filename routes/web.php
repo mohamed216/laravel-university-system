@@ -110,3 +110,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/my-lectures', [OnlineLectureController::class, 'myLectures'])->name('online-lectures.my');
     Route::get('/online-lectures/{lecture}/join', [OnlineLectureController::class, 'joinLecture'])->name('online-lectures.join');
 });
+
+
+// CV Route
+Route::get('/cv', function () {
+    return view('cv');
+});
