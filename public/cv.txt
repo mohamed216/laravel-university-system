@@ -1,5 +1,5 @@
 MOHAMED ARABI
-Full Stack Developer
+Full Stack Developer | Laravel & Flutter Specialist
 ================================================================
 
 CONTACT
@@ -11,22 +11,21 @@ Location: Riyadh, KSA
 
 SUMMARY
 --------------------------------------------------------------------------------
-Experienced Full Stack Developer with 5+ years in web and mobile app 
-development. Specialized in Laravel and Flutter. Delivered scalable 
-enterprise solutions. Strong problem-solving skills.
-
-EDUCATION
---------------------------------------------------------------------------------
-BSc Information Technology          New Castle College           2017
-Diploma in IT                     Omdurman Alahlia Univ      2013
-CCNA                              Cisco Networking Academy    2016
+Full Stack Developer with 5+ years of experience in web and mobile application 
+development. Expert in Laravel PHP framework and Flutter mobile development. 
+Proven track record of delivering scalable enterprise applications. Skilled in 
+RESTful API development, database management, and cloud integration.
 
 SKILLS
 --------------------------------------------------------------------------------
-Backend:       PHP, Laravel, Python, RESTful API, MySQL
-Mobile:        Flutter, Dart, GetX, Firebase
-AI Tools:      ChatGPT, Claude, OpenAI
-Tools:         Git, GitHub, Linux Server, Network Admin (CCNA)
+Programming Languages:   PHP, Laravel, Python, Dart, JavaScript
+Mobile Development:      Flutter, Dart, GetX, Provider, Firebase
+Backend Development:      Laravel, RESTful API, MySQL, SQL Server
+Frontend:                HTML5, CSS3, Bootstrap, Blade Templates
+Tools:                   Git, GitHub, Linux Server, AI Tools (ChatGPT, Claude)
+Database:                MySQL, SQL Server, SQLite, Firebase Firestore
+Version Control:         Git, GitHub, GitLab
+Networking:             CCNA, Network Administration
 
 EXPERIENCE
 --------------------------------------------------------------------------------
@@ -34,40 +33,86 @@ EXPERIENCE
 Full Stack Developer
 Freelance | 2022 - Present
 
-- Developed web applications using Laravel
-- Built mobile apps with Flutter
-- Implemented RESTful APIs
-- Database design and optimization
+- Developed 10+ web applications using Laravel framework
+- Built 5+ cross-platform mobile applications using Flutter
+- Designed and implemented RESTful APIs for mobile and web integration
+- Managed database design and optimization for high-traffic applications
+- Collaborated with international clients to deliver customized solutions
+- Integrated payment gateways and third-party services
+- Deployed applications on Linux servers with SSL certificates
 
 Flutter Developer
-Sands Company, KSA | 2022
+Sands Company, KSA | July 2022 - October 2022
 
-- Built food delivery mobile application
-- Firebase integration
-- Real-time features
+- Developed complete food delivery mobile application from scratch
+- Implemented user authentication and payment integration
+- Built real-time features for order tracking using Firebase
+- Created 4 mobile apps: Customer, Seller, Rider, and Admin Panel
+- Integrated push notifications and location services
 
 Network Administrator
-National Health Insurance Fund | 2014 - 2015
+National Health Insurance Fund, Sudan | January 2014 - January 2015
 
-- Network infrastructure management
-- IT support and maintenance
+- Managed network infrastructure for 100+ workstations
+- Provided technical support to 50+ end users
+- Maintained system security, backups, and disaster recovery
+- Installed and configured hardware and software systems
 
 PROJECTS
 --------------------------------------------------------------------------------
+
 University Management System (Laravel)
-- Student enrollment, courses, attendance, grades, fees
-- Multi-language support
+- Complete university management solution
+- Features: Student enrollment, Course management, Attendance tracking
+- Features: Grade management, Fee management, Library system
+- Features: Online lectures, Academic calendar
+- Tech: Laravel, MySQL, Bootstrap, REST API
+- Multi-language support: Arabic and English
 
 HR Management System (Laravel)
-- Employee management, attendance, payroll
+- Employee management and HR operations
+- Features: Employee CRUD, Attendance tracking, Leave requests
+- Features: Payroll calculation, Performance reviews
+- Features: PDF reports, Excel export, Multi-language
+- Tech: Laravel, MySQL, DomPDF, Maatwebsite
 
 Food Delivery Platform (Flutter)
-- Customer, seller, rider apps + admin panel
+- Complete delivery ecosystem
+- Apps: Customer app, Seller portal, Rider app, Admin panel
+- Features: Real-time tracking, Push notifications, Payment integration
+- Tech: Flutter, Firebase, GetX, REST API
+
+Hospital Management System (Laravel)
+- Healthcare management solution
+- Features: Patient records, Appointments, Medical billing
+- Tech: Laravel, MySQL, Bootstrap
+
+E-Commerce Platform (Laravel)
+- Full-featured online store
+- Features: Shopping cart, Payment gateway, Admin panel
+- Tech: Laravel, MySQL, Stripe integration
+
+EDUCATION
+--------------------------------------------------------------------------------
+Bachelor of Science in Information Technology    New Castle College           2017
+Diploma in Information Technology              Omdurman Alahlia University  2013
+CCNA Certification                               Cisco Networking Academy     2016
+
+CERTIFICATIONS
+--------------------------------------------------------------------------------
+CCNA - Cisco Certified Network Associate
+Laravel Framework Certification (in progress)
+Flutter Mobile Development Certification (in progress)
 
 LANGUAGES
 --------------------------------------------------------------------------------
 Arabic:      Native
 English:     Intermediate
 
-================================================================
-Last Updated: March 2026
+TECHNICAL KEYWORDS
+--------------------------------------------------------------------------------
+Full Stack Developer, Laravel Developer, PHP Developer, Flutter Developer, 
+Mobile Application Developer, Web Application Developer, REST API Developer,
+MySQL Database, Database Administrator, Git, GitHub, Version Control,
+Linux Server, API Integration, Payment Gateway, Firebase, Mobile App,
+Web Development, Software Developer, Backend Developer, Frontend Developer
