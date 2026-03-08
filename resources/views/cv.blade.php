@@ -76,11 +76,12 @@
             </ul>
         </div>
         <div class="skill-box">
-            <h4>AI Tools</h4>
+            <h4>AI Tools & Usage</h4>
             <ul>
-                <li>ChatGPT</li>
-                <li>Claude</li>
-                <li>OpenAI</li>
+                <li>ChatGPT-4: Code generation, debugging</li>
+                <li>Claude AI: Documentation, prompts</li>
+                <li>Midjourney: Design assets</li>
+                <li>Prompt Engineering</li>
             </ul>
         </div>
         <div class="skill-box">

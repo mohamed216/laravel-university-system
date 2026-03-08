@@ -54,7 +54,7 @@ Programming Languages: PHP Laravel Python Dart JavaScript
 Mobile: Flutter Dart GetX Provider Firebase
 Backend: Laravel REST API MySQL SQL Server
 Frontend: HTML CSS Bootstrap Blade Templates
-Tools: Git GitHub Linux AI Tools ChatGPT Claude
+AI Tools: ChatGPT-4, Claude AI, Midjourney | Prompt Engineering | Code Generation | Debugging | Documentation Writing
 
 EDUCATION
 --------------------------------------------------------------------------------
